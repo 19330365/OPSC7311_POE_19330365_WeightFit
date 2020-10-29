@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txWeightFit"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:layout_marginTop="15dp"
+        android:text="Weight Fit"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+
+        // image link: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hiclipart.com%2Ffree-transparent-background-png-clipart-fmtgb&psig=AOvVaw1Hm1mHwBMTbJM2fyUm4OQg&ust=1603991155140000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjqturi1-wCFQAAAAAdAAAAABAD
+
+
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif-black"
+                android:elevation="@android:dimen/app_icon_size"
+                android:hint="Enter Email "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif-black"
+                android:elevation="@android:dimen/app_icon_size"
+                android:hint="Enter Password "
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="69dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@android:color/black"
+                    android:text="register"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@android:color/black"
+                    android:text="login"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        app:srcCompat="@drawable/fitnessApp" />
+

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "710598169959",
+    "firebase_url": "https://opsc7311poe19330365weightfit.firebaseio.com",
+    "project_id": "opsc7311poe19330365weightfit",
+    "storage_bucket": "opsc7311poe19330365weightfit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710598169959:android:e25e00bcc4bc1c984e4bc2",
+        "android_client_info": {
+          "package_name": "com.tillster.opsc7311_poe_19330365_weightfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710598169959-cfsdmh746hagta09tcu10nob32ko8t58.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tillster.opsc7311_poe_19330365_weightfit",
+            "certificate_hash": "aae1e5023971eb2a4f3d7162a573d0188cf4f919"
+          }
+        },
+        {
+          "client_id": "710598169959-5fctoktjp73k89q6e83q4er523i59cpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY-Lvh5aj77GJ00RhunvizRzGcOmDbgYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710598169959-5fctoktjp73k89q6e83q4er523i59cpr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
