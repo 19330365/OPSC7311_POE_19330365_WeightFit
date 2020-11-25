@@ -8,18 +8,26 @@
     android:background="@android:color/holo_blue_dark"
     tools:context=".MainActivity">
 
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp"
+    app:cardBackgroundColor="@android:color/holo_blue_light">
+
     <TextView
         android:id="@+id/txWeightFit"
         android:layout_width="match_parent"
         android:layout_height="113dp"
         android:layout_marginTop="15dp"
-        android:text="Weight Fit"
+        android:text="WeightFit"
         android:textAlignment="center"
         android:textSize="50dp"
         android:textStyle="bold" />
 
-
-        // image link: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hiclipart.com%2Ffree-transparent-background-png-clipart-fmtgb&psig=AOvVaw1Hm1mHwBMTbJM2fyUm4OQg&ust=1603991155140000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjqturi1-wCFQAAAAAdAAAAABAD
+</androidx.cardview.widget.CardView>
 
 
 
@@ -35,16 +43,18 @@
                 android:hint="Enter Email "
                 android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:fontFamily="sans-serif-black"
-                android:elevation="@android:dimen/app_icon_size"
-                android:hint="Enter Password "
-                android:textSize="15dp" />
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:elevation="@android:dimen/app_icon_size"
+        android:fontFamily="sans-serif-black"
+        android:hint="Enter Password "
+        android:inputType="textPassword"
+        android:textSize="15dp" />
+
 
             <LinearLayout
                 android:layout_width="250dp"
@@ -54,20 +64,9 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnRegister"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:backgroundTint="@android:color/black"
-                    android:text="register"
-                    android:textColor="@android:color/white" />
-
-                <Button
                     android:id="@+id/btnLogin"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
@@ -75,12 +74,25 @@
                     android:text="login"
                     android:textColor="@android:color/white" />
 
-
             </LinearLayout>
+    <TextView
+        android:id="@+id/txRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="80dp"
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="315dp"
-        app:srcCompat="@drawable/fitnessApp" />
+        />
+    <TextView
+        android:id="@+id/txforgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="80dp"
 
+        />
+</LinearLayout>

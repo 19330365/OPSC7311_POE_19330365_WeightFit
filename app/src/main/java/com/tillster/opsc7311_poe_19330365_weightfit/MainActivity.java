@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,10 +22,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity<add> extends AppCompatActivity
 {
-    EditText email, password;
-    Button login, register;
-    private FirebaseAuth mAuth;
-    FirebaseUser user;
+    EditText Email, Password;
+    Button Login;
+    TextView Register, ForgotPassword;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,55 +35,69 @@ public class MainActivity<add> extends AppCompatActivity
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        email = findViewById(R.id.etEmail);
-        password = findViewById(R.id.etPassword);
-        login = findViewById(R.id.btnLogin);
-        register = findViewById(R.id.btnRegister);
+        Register = (TextView) findViewById(R.id.txRegister);
+        Email = findViewById(R.id.etEmail);
+        Password = findViewById(R.id.etPassword);
+        Login = findViewById(R.id.btnLogin);
 
-    }
-    @Override
-        public void onClick(View v)
-        {
-            if(register.isSelected())
-            {
 
-                startActivity(new Intent(this, Registration.class));
-            }
-        }
-
-        login.setOnClickListener(new View.OnClickListener() {
+        Register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                String emailInput = email.getText().toString().trim();
-                String passwordInput = password.getText().toString().trim();
+            public void onClick(View v) {
+                Intent registerActivity = new Intent(getApplicationContext(), Registration.class);
+                startActivity(registerActivity);
 
-                mAuth.signInWithEmailAndPassword(emailInput, passwordInput).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task)
-                    {
-                        if(task.isSuccessful())
-                        {
-                            Toast.makeText(MainActivity.this, "Login is successful " + mAuth.getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(MainActivity.this, "Login unsuccessful", Toast.LENGTH_SHORT).show();
-                        }
+                Log.d("EB","Hit 1");
+                //startActivity(new Intent(getApplicationContext(),Registration.class));
+            }
+        });
 
-                    }
-                }).addOnFailureListener(new OnFailureListener()
-                {
+        Login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String email = Email.getText().toString().trim();
+                String password = Password.getText().toString().trim();
+
+                if(TextUtils.isEmpty(email)){
+                    Email.setError("Email is missing");
+                    return;
+                }
+                if(TextUtils.isEmpty(password)){
+                    Password.setError("Password is missing");
+                    return;
+                }
+                if(password.length() < 5) {
+                    Password.setError("Password must be <= 5 characters");
+                    return;
+                }
+
+
+
+                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onFailure(@NonNull Exception e)
-                    {
-                        Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                     if(task.isSuccessful()){
+                         Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                         startActivity(new Intent(getApplicationContext(), Home.class));
+
+                     }
                     }
                 });
             }
+
+    });
+
+
+            }
         }
 
 
-    }
+
+
+
+
+
+
 //Coding attribution
 //----------------------------------------------
 //Registration:
@@ -90,3 +108,35 @@ public class MainActivity<add> extends AppCompatActivity
 //Add Login Feature
 //https://youtu.be/DqSaEO3ZDwI
 //----------------------------------------------
+//Types of intent W3School, Implicit intent
+//https://www.w3adda.com/android-tutorial/android-intents
+//
+//IntentsendIntent = newIntent();
+//SendIntent.setAction(Intent.Action_Send);
+//sendIntent.putExtra(IntentExtra_Text, Message);
+//StartActivity(sendIntent);
+//
+//--------------------------------------------------------------
+//Images used:
+//
+//Muscle Gain image: Weight training
+//shorturl.at/pQY49
+//
+//pushup:Pinterest
+//shorturl.at/kpGLP
+//
+//WeightLoss: One Step Towards Better Health | NARFA
+//shorturl.at/auTV4
+//
+//bodyType: Free Body Type Calculator
+//shorturl.at/otHXY
+//
+//cut/bulk: Reddit
+// shorturl.at/kuxPV
+//
+//Profile:
+//shorturl.at/couw3
+//
+//Diary:
+//shorturl.at/hwHUV
+//----------------------------------------------------

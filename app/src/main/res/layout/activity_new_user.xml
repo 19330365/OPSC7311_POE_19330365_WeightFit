@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".NewUser">
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="78dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Logout"
+        android:onClick="logout"
+        android:textColor="@android:color/white" />
+
+<ScrollView
+    android:id="@+id/svGoals"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp">
+
+    <TextView
+        android:id="@+id/txWeightFit"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="15dp"
+        android:text="Welcome to WeightFit"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Before you begin your journey please complete/enter the following "
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etCurrentHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Height"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etCurrentWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Weight"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etGoalHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Goal Height"
+            android:inputType="number|numberDecimal" />
+
+        <EditText
+            android:id="@+id/etGoalWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Goal Weight"
+            android:inputType="text" />
+
+
+
+    <Button
+        android:id="@+id/btnNContinue"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/black"
+        android:text="CONTINUE"
+        android:textColor="@android:color/white" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

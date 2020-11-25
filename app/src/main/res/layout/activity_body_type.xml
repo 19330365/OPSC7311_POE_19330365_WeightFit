@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".BodyType">
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="78dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Logout"
+        android:textColor="@android:color/white" />
+
+    <ScrollView
+        android:id="@+id/svBodyType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tvSetGoal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginBottom="20dp"
+                android:text="BODY TYPE"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+
+            <ImageView
+                android:layout_width="287dp"
+                android:layout_height="189dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/skinny" />
+
+            <TextView
+                android:id="@+id/tvSkinny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:text="Skinny"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/regular" />
+
+            <TextView
+                android:id="@+id/tvRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:text="Regular"
+                android:textAlignment="center" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/extra" />
+
+            <TextView
+                android:id="@+id/tvExtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:text="Extra"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
